@@ -1,0 +1,29 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icon.png",
+         "16": "icon.png",
+         "48": "icon.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "__MSG_extName__"
+   },
+   "default_locale": "zh_CN",
+   "description": "__MSG_appDesc__",
+   "host_permissions": [ "https://search-codetable.eastmoney.com/*", "https://push2.eastmoney.com/*", "https://webquotepic.eastmoney.com/*" ],
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA64sX6NUOtBNYfFrzpZDLHsmjc2cAk3mfNkokPpUzplaFwt8ymgf4dsLarKHwSdJH4IboQ0f/tCZP+9sOih23bMmBUBnn6JyKX9jHvUiSMKqRFmvJLmDGbjaz8QKVqJ2sgHf2ae/O7ura174C/3hftFnBQJ7euANj9RBebl6weYXaR+7+rtZObF4Hb2YvTtwpYe/gIyyyVgqKjv7ySif+nv0cu4RiaWdXR6YWBWlqSDLCp06J/voEXR2+qnGEuaG73zugdi+rddPCoKawdi2SNt/rfNiWZSckOTAb8KTHoW0V4A3MF4SKveE88l3SlDwH0o2TvWz8vTsEX4TjhI10CwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_appName__",
+   "options_page": "options.html",
+   "permissions": [ "storage", "sidePanel" ],
+   "side_panel": {
+      "default_path": "popup.html"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.24"
+}

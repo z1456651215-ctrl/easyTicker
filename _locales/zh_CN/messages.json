@@ -1,0 +1,176 @@
+{
+   "alertClosePage": {
+      "message": "必须关闭该页面，重新从【右键插件->选项】打开，进行关闭操作！"
+   },
+   "appDesc": {
+      "message": "支持A股、港股、美股实时行情，极简股票盯盘利器！"
+   },
+   "appName": {
+      "message": "股票 - 极简盯盘 (EasyTicker)"
+   },
+   "btnDel": {
+      "message": "删除"
+   },
+   "btnDone": {
+      "message": "完成"
+   },
+   "btnHide": {
+      "message": "隐藏"
+   },
+   "btnShow": {
+      "message": "显示"
+   },
+   "btnSort": {
+      "message": "排序"
+   },
+   "cfgBtnSettings": {
+      "message": "配置按钮："
+   },
+   "cfgBtnTip": {
+      "message": "关闭请 `右键插件->选项` 进入配置"
+   },
+   "cfgChartRange": {
+      "message": "图表区间："
+   },
+   "cfgChartRefresh": {
+      "message": "图表刷新："
+   },
+   "cfgChartSwitch": {
+      "message": "趋势图表："
+   },
+   "cfgColor": {
+      "message": "涨跌颜色："
+   },
+   "cfgColorBlackUp": {
+      "message": "黑灰"
+   },
+   "cfgColorGrayUp": {
+      "message": "金绿"
+   },
+   "cfgColorGreenUp": {
+      "message": "绿涨红跌"
+   },
+   "cfgColorRedUp": {
+      "message": "红涨绿跌"
+   },
+   "cfgDisplayMode": {
+      "message": "布局密度："
+   },
+   "cfgLanguage": {
+      "message": "语言设置："
+   },
+   "cfgMarketGroup": {
+      "message": "市场分组："
+   },
+   "confirmCloseBtn": {
+      "message": "关闭“配置按钮”，需从【右键插件->选项】打开。确定要关闭吗？"
+   },
+   "donateAli": {
+      "message": "推荐使用支付宝"
+   },
+   "donateAliTip": {
+      "message": "🍖赏个小鸡腿！"
+   },
+   "donateBtn": {
+      "message": "👍好用，赞一下！"
+   },
+   "donateDismiss": {
+      "message": "😶好烦，别再显示！✖"
+   },
+   "donateThanks": {
+      "message": "👍加油，我已赞赏！📈"
+   },
+   "donateWx": {
+      "message": "推荐使用微信支付"
+   },
+   "donateWxTip": {
+      "message": "☕请喝杯咖啡！"
+   },
+   "extName": {
+      "message": "股票 - 极简盯盘 (EasyTicker)"
+   },
+   "inputPlaceholder": {
+      "message": "中文、拼音、简写、A股、港股、美股"
+   },
+   "langEn": {
+      "message": "English"
+   },
+   "langZh": {
+      "message": "简体中文"
+   },
+   "lblLanguage": {
+      "message": "语言："
+   },
+   "loading": {
+      "message": "Loading..."
+   },
+   "loadingConfig": {
+      "message": "正在加载配置..."
+   },
+   "modeL": {
+      "message": "宽松"
+   },
+   "modeM": {
+      "message": "标准"
+   },
+   "modeS": {
+      "message": "紧凑"
+   },
+   "modeXl": {
+      "message": "最大"
+   },
+   "modeXs": {
+      "message": "最小"
+   },
+   "msgAdded": {
+      "message": "已添加"
+   },
+   "msgExist": {
+      "message": "已存在"
+   },
+   "msgNoResult": {
+      "message": "未搜索到相关股票"
+   },
+   "msgNoStocks": {
+      "message": "暂无股票，请添加"
+   },
+   "msgSaved": {
+      "message": "设置已保存"
+   },
+   "optHide": {
+      "message": "隐藏"
+   },
+   "optShow": {
+      "message": "显示"
+   },
+   "popupNoMatch": {
+      "message": "该分类无自选股\u003Cbr>请点击配置添加"
+   },
+   "popupNoStocks": {
+      "message": "暂无自选股\u003Cbr>请点击配置添加"
+   },
+   "range1m": {
+      "message": "最近 1 月"
+   },
+   "range1y": {
+      "message": "最近 1 年"
+   },
+   "range3y": {
+      "message": "最近 3 年（周线）"
+   },
+   "rangeDay": {
+      "message": "当日（分时）"
+   },
+   "time10s": {
+      "message": "10秒"
+   },
+   "time1m": {
+      "message": "1分钟"
+   },
+   "time30s": {
+      "message": "30秒"
+   },
+   "time5m": {
+      "message": "5分钟"
+   }
+}

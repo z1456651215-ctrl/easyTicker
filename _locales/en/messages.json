@@ -1,0 +1,176 @@
+{
+   "alertClosePage": {
+      "message": "Please close this page and reopen from Extension Options to disable the button."
+   },
+   "appDesc": {
+      "message": "Track stocks discreetly while you work. Supports US, HK, and China markets."
+   },
+   "appName": {
+      "message": "Stock Mini - Easy Ticker"
+   },
+   "btnDel": {
+      "message": "Del"
+   },
+   "btnDone": {
+      "message": "Done"
+   },
+   "btnHide": {
+      "message": "Hide"
+   },
+   "btnShow": {
+      "message": "Show"
+   },
+   "btnSort": {
+      "message": "Sort"
+   },
+   "cfgBtnSettings": {
+      "message": "Config Button:"
+   },
+   "cfgBtnTip": {
+      "message": "Go to Right-click extension > Options"
+   },
+   "cfgChartRange": {
+      "message": "Chart Range:"
+   },
+   "cfgChartRefresh": {
+      "message": "Chart Refresh:"
+   },
+   "cfgChartSwitch": {
+      "message": "Show Chart:"
+   },
+   "cfgColor": {
+      "message": "Colors:"
+   },
+   "cfgColorBlackUp": {
+      "message": "Black"
+   },
+   "cfgColorGrayUp": {
+      "message": "Golden"
+   },
+   "cfgColorGreenUp": {
+      "message": "Green Up"
+   },
+   "cfgColorRedUp": {
+      "message": "Red Up"
+   },
+   "cfgDisplayMode": {
+      "message": "Layout Density:"
+   },
+   "cfgLanguage": {
+      "message": "Language:"
+   },
+   "cfgMarketGroup": {
+      "message": "Market Groups:"
+   },
+   "confirmCloseBtn": {
+      "message": "Disabling this button means you must access options via Right Click. Confirm?"
+   },
+   "donateAli": {
+      "message": "Alipay"
+   },
+   "donateAliTip": {
+      "message": "Buy me a chicken leg!"
+   },
+   "donateBtn": {
+      "message": "👍 Thumbs up!"
+   },
+   "donateDismiss": {
+      "message": "😶 Dismiss forever"
+   },
+   "donateThanks": {
+      "message": "👍 Donated, keep going!"
+   },
+   "donateWx": {
+      "message": "WeChat Pay"
+   },
+   "donateWxTip": {
+      "message": "Buy me a coffee!"
+   },
+   "extName": {
+      "message": "Stock Mini - Easy Ticker"
+   },
+   "inputPlaceholder": {
+      "message": "Code, Name · US HK CN UK DE FR"
+   },
+   "langEn": {
+      "message": "English"
+   },
+   "langZh": {
+      "message": "简体中文"
+   },
+   "lblLanguage": {
+      "message": "Language:"
+   },
+   "loading": {
+      "message": "Loading..."
+   },
+   "loadingConfig": {
+      "message": "Loading settings..."
+   },
+   "modeL": {
+      "message": "L"
+   },
+   "modeM": {
+      "message": "M"
+   },
+   "modeS": {
+      "message": "S"
+   },
+   "modeXl": {
+      "message": "XL"
+   },
+   "modeXs": {
+      "message": "XS"
+   },
+   "msgAdded": {
+      "message": "Added"
+   },
+   "msgExist": {
+      "message": "Already exists"
+   },
+   "msgNoResult": {
+      "message": "No stocks found"
+   },
+   "msgNoStocks": {
+      "message": "No stocks added yet."
+   },
+   "msgSaved": {
+      "message": "Settings saved"
+   },
+   "optHide": {
+      "message": "Hide"
+   },
+   "optShow": {
+      "message": "Show"
+   },
+   "popupNoMatch": {
+      "message": "No stocks in this category"
+   },
+   "popupNoStocks": {
+      "message": "No stocks.\u003Cbr>Click settings to add."
+   },
+   "range1m": {
+      "message": "Last 1 Month"
+   },
+   "range1y": {
+      "message": "Last 1 Year"
+   },
+   "range3y": {
+      "message": "Last 3 Years"
+   },
+   "rangeDay": {
+      "message": "Intraday"
+   },
+   "time10s": {
+      "message": "10s"
+   },
+   "time1m": {
+      "message": "1 min"
+   },
+   "time30s": {
+      "message": "30s"
+   },
+   "time5m": {
+      "message": "5 mins"
+   }
+}
