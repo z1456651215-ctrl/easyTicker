@@ -80,6 +80,15 @@ contextBridge.exposeInMainWorld("easyTickerChrome", chromeApi);
 
 contextBridge.exposeInMainWorld("easyTickerDesktop", {
   isDesktop: true,
+  beginDrag(point) {
+    ipcRenderer.send("easyTicker:window:drag-start", point);
+  },
+  moveDrag(point) {
+    ipcRenderer.send("easyTicker:window:drag-move", point);
+  },
+  endDrag() {
+    ipcRenderer.send("easyTicker:window:drag-end");
+  },
 });
 
 window.addEventListener("DOMContentLoaded", () => {

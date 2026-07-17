@@ -62,6 +62,12 @@
    "cfgMarketGroup": {
       "message": "Market Groups:"
    },
+   "cfgPriceFlash": {
+      "message": "Price Flash:"
+   },
+   "cfgWindowOpacity": {
+      "message": "Ticker Opacity:"
+   },
    "confirmCloseBtn": {
       "message": "Disabling this button means you must open Settings from the EasyTicker menu bar icon. Confirm?"
    },
@@ -139,6 +145,12 @@
    },
    "optHide": {
       "message": "Hide"
+   },
+   "optOff": {
+      "message": "Off"
+   },
+   "optOn": {
+      "message": "On"
    },
    "optShow": {
       "message": "Show"

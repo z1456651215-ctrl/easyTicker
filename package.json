@@ -28,6 +28,7 @@
       "options.js",
       "popup.html",
       "popup.js",
+      "desktop-drag.js",
       "manifest.json"
     ],
     "mac": {
