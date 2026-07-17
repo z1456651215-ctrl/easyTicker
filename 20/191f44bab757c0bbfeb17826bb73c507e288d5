@@ -1,0 +1,65 @@
+_locales/zh_CN/messages.json
+  s_2aa7292b485a4a::t_a655311aa26b27 3,30,66
+_locales/en/messages.json
+  s_2aa7292b485a4a::t_a655311aa26b27 3,30,66
+electron/preload.cjs
+  s_2aa7292b485a4a::t_807365b9abf03b 1-2,4-40,42-58,72,80-87
+  s_2aa7292b485a4a::t_1e8b4d5f31384b 41,73,78-79
+  s_2aa7292b485a4a::t_6d82605f1e80e1 3,59-71,74-77
+electron/main.cjs
+  s_2aa7292b485a4a::t_3b414c0bf6d2c2 193-195,197,202-204,382-384
+  s_2aa7292b485a4a::t_d5d71415c5b8fd 294-301,322-325
+  s_2aa7292b485a4a::t_807365b9abf03b 1,3-31,33,38-192,196,205-248,328-333,335-336,338-339,341-350,364-374,376-381,385-386
+  s_2aa7292b485a4a::t_517eb34c402f9d 35,311,317,327
+  s_2aa7292b485a4a::t_19dabe9ed750cd 32,351-352,361-363
+  s_2aa7292b485a4a::t_33dfad0793ae59 2,34,36-37,249-250,260-272,276-278,282,287,293,307,353-360
+  s_2aa7292b485a4a::t_7fe2992a3d05be 198-201,375
+  s_2aa7292b485a4a::t_e85873b1a78741 251-259,334,337,340
+  s_2aa7292b485a4a::t_52bfd0d00ce43b 273-275
+  s_2aa7292b485a4a::t_60914a03f11ba7 279-281,283-286,288-292,302-306,308-310,312-316,318-321,326
+popup.html
+  s_2aa7292b485a4a::t_0e95248c693b80 13
+  s_2aa7292b485a4a::t_57c7bdf89e0abb 1
+options.js
+  s_2aa7292b485a4a::t_c9d01254dec2be 1
+package.json
+  s_2aa7292b485a4a::t_807365b9abf03b 1-4,6-9,11-15,18-33,36-38
+  s_2aa7292b485a4a::t_1cc638742249b1 16-17
+  s_2aa7292b485a4a::t_19dabe9ed750cd 10
+  s_2aa7292b485a4a::t_5a5d334f520091 5,34-35
+.gitignore
+  s_2aa7292b485a4a::t_807365b9abf03b 1-6
+electron/storage.cjs
+  s_2aa7292b485a4a::t_807365b9abf03b 1-10,15-80,82,89,92-95,97-98,103,106-108,114,117-131
+  s_2aa7292b485a4a::t_ad611690baf719 11-14,81,83-88,90-91,96,99-102,104-105,109-113,115-116
+test/storage.test.cjs
+  s_2aa7292b485a4a::t_807365b9abf03b 1-41,44-45,48,68
+  s_2aa7292b485a4a::t_2431b6c93d1a5e 42-43,46-47,49-67
+options.html
+  s_2aa7292b485a4a::t_bf99ba68243fa0 1
+popup.js
+  s_2aa7292b485a4a::t_b55a9a535d8eff 1
+common.js
+  s_2aa7292b485a4a::t_b9af1ac6c9094b 1
+package-lock.json
+  s_2aa7292b485a4a::t_0ce09a475a3086 1-3594
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "20191f44bab757c0bbfeb17826bb73c507e288d5",
+  "prompts": {},
+  "logical_commit_id": "20191f44bab757c0bbfeb17826bb73c507e288d5",
+  "sessions": {
+    "s_2aa7292b485a4a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f69ad-2913-7f91-9aaf-733e78271b2c",
+        "model": "gpt-5.5"
+      },
+      "human_author": "zhanghui.james <zhanghui.james@bigo.sg>",
+      "total_additions": 799,
+      "total_deletions": 83
+    }
+  }
+}
