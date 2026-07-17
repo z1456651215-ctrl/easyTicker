@@ -1,0 +1,58 @@
+options.html
+  s_2aa7292b485a4a::t_3e4f9d2012bbe6 1
+electron/preload.cjs
+  s_2aa7292b485a4a::t_72cc1f62511545 83-91
+desktop-drag.js
+  s_2aa7292b485a4a::t_72cc1f62511545 1-35
+_locales/en/messages.json
+  s_2aa7292b485a4a::t_9ac3640b419376 69
+  s_2aa7292b485a4a::t_e52c148230f0bf 65-67,148-153
+  s_2aa7292b485a4a::t_e2513c1ae7ee10 68,70
+_locales/zh_CN/messages.json
+  s_2aa7292b485a4a::t_f0c7bb6bb560d7 65-67,148-153
+  s_2aa7292b485a4a::t_f0bfe43b123cc5 68,70
+  s_2aa7292b485a4a::t_5d77af8c33714a 69
+electron/main.cjs
+  s_2aa7292b485a4a::t_994198f637ee2a 22-23,140,142-143,151,294,297,381,386,405
+  s_2aa7292b485a4a::t_1c69d3cc558f02 346-350,354-355,373-380,384,397-399,422
+  s_2aa7292b485a4a::t_ec97423d57e46e 353,383
+  s_2aa7292b485a4a::t_228ef363b22a41 120-129,132,154,157,161-164,221,268
+  s_2aa7292b485a4a::t_8226eca26e8689 12,35,270-275,277,326,370,394,400-404,406-416,418,448-472
+  s_2aa7292b485a4a::t_15af5d3c068c4d 369,371-372,393,395-396
+  s_2aa7292b485a4a::t_e6afe7391b7ced 340,359-360,388-390
+  s_2aa7292b485a4a::t_74a41d740eb7e0 352,357,382,387
+  s_2aa7292b485a4a::t_aef8d0af2a8ac9 338
+  s_2aa7292b485a4a::t_f92c6fc8705134 351,356,385
+  s_2aa7292b485a4a::t_b1258df255d98f 328-333,335,358
+  s_2aa7292b485a4a::t_05c401726a5120 339,361-368,391-392
+  s_2aa7292b485a4a::t_d5caefdfec5f1b 269
+  s_2aa7292b485a4a::t_a5da8ad7cf4f91 327
+package.json
+  s_2aa7292b485a4a::t_0c7061a909faea 31
+options.js
+  s_2aa7292b485a4a::t_10e9c246f50386 1
+popup.js
+  s_2aa7292b485a4a::t_685642a5815eb0 1
+popup.html
+  s_2aa7292b485a4a::t_c65a60e5693394 1
+  s_2aa7292b485a4a::t_1024c2b178d0fa 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "b83668cde9622c0fa3d96e98b62dd4e0d49f45cd",
+  "prompts": {},
+  "logical_commit_id": "b83668cde9622c0fa3d96e98b62dd4e0d49f45cd",
+  "sessions": {
+    "s_2aa7292b485a4a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f69ad-2913-7f91-9aaf-733e78271b2c",
+        "model": "gpt-5.5"
+      },
+      "human_author": "zhanghui.james <zhanghui.james@bigo.sg>",
+      "total_additions": 250,
+      "total_deletions": 52
+    }
+  }
+}
