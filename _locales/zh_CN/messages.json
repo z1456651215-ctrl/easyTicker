@@ -1,6 +1,6 @@
 {
    "alertClosePage": {
-      "message": "必须关闭该页面，重新从【右键插件->选项】打开，进行关闭操作！"
+      "message": "必须关闭该页面，重新从【菜单栏 EasyTicker 图标->设置】打开，进行关闭操作！"
    },
    "appDesc": {
       "message": "支持A股、港股、美股实时行情，极简股票盯盘利器！"
@@ -27,7 +27,7 @@
       "message": "配置按钮："
    },
    "cfgBtnTip": {
-      "message": "关闭请 `右键插件->选项` 进入配置"
+      "message": "关闭请从菜单栏 EasyTicker 图标进入设置"
    },
    "cfgChartRange": {
       "message": "图表区间："
@@ -63,7 +63,7 @@
       "message": "市场分组："
    },
    "confirmCloseBtn": {
-      "message": "关闭“配置按钮”，需从【右键插件->选项】打开。确定要关闭吗？"
+      "message": "关闭“配置按钮”后，需从【菜单栏 EasyTicker 图标->设置】打开。确定要关闭吗？"
    },
    "donateAli": {
       "message": "推荐使用支付宝"

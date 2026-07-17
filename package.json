@@ -1,0 +1,38 @@
+{
+  "name": "easyticker-macos",
+  "version": "2.0.24",
+  "private": true,
+  "author": "EasyTicker",
+  "description": "EasyTicker desktop floating ticker for macOS.",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "smoke": "electron . --smoke-test",
+    "test": "node --test",
+    "pack:mac": "electron-builder --mac dir",
+    "dist:mac": "electron-builder --mac dmg zip"
+  },
+  "devDependencies": {
+    "electron": "^43.1.1",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.easyticker.desktop",
+    "productName": "EasyTicker",
+    "files": [
+      "electron/**/*",
+      "_locales/**/*",
+      "common.js",
+      "icon.png",
+      "options.html",
+      "options.js",
+      "popup.html",
+      "popup.js",
+      "manifest.json"
+    ],
+    "mac": {
+      "category": "public.app-category.finance",
+      "icon": "build/icon.png"
+    }
+  }
+}

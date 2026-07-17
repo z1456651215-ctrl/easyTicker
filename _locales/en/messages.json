@@ -1,6 +1,6 @@
 {
    "alertClosePage": {
-      "message": "Please close this page and reopen from Extension Options to disable the button."
+      "message": "Please close this page and reopen Settings from the EasyTicker menu bar icon."
    },
    "appDesc": {
       "message": "Track stocks discreetly while you work. Supports US, HK, and China markets."
@@ -27,7 +27,7 @@
       "message": "Config Button:"
    },
    "cfgBtnTip": {
-      "message": "Go to Right-click extension > Options"
+      "message": "Use the EasyTicker menu bar icon to open Settings"
    },
    "cfgChartRange": {
       "message": "Chart Range:"
@@ -63,7 +63,7 @@
       "message": "Market Groups:"
    },
    "confirmCloseBtn": {
-      "message": "Disabling this button means you must access options via Right Click. Confirm?"
+      "message": "Disabling this button means you must open Settings from the EasyTicker menu bar icon. Confirm?"
    },
    "donateAli": {
       "message": "Alipay"
