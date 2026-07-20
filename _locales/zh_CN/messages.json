@@ -62,6 +62,9 @@
    "cfgMarketGroup": {
       "message": "市场分组："
    },
+   "cfgPercentOnly": {
+      "message": "仅涨跌幅："
+   },
    "cfgPriceFlash": {
       "message": "涨跌闪烁："
    },

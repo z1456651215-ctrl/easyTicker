@@ -89,6 +89,9 @@ contextBridge.exposeInMainWorld("easyTickerDesktop", {
   endDrag() {
     ipcRenderer.send("easyTicker:window:drag-end");
   },
+  setPercentOnlyMode(enabled) {
+    ipcRenderer.send("easyTicker:window:percent-only-mode", !!enabled);
+  },
 });
 
 window.addEventListener("DOMContentLoaded", () => {

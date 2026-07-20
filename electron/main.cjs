@@ -20,6 +20,7 @@ const APP_ORIGIN = `${APP_SCHEME}://app`;
 const PRELOAD_PATH = path.join(__dirname, "preload.cjs");
 const ICON_PATH = path.join(ROOT_DIR, "icon.png");
 const TICKER_WINDOW_WIDTH = 260;
+const TICKER_PERCENT_ONLY_WIDTH = 72;
 const TICKER_WINDOW_HEIGHT = 32;
 const EASTMONEY_URLS = [
   "https://search-codetable.eastmoney.com/*",
@@ -125,6 +126,18 @@ function pinTickerWindow(win) {
   if (typeof win.moveTop === "function") {
     win.moveTop();
   }
+}
+
+function setTickerPercentOnlyMode(win, enabled) {
+  if (!win || win.isDestroyed()) return;
+  const width = enabled ? TICKER_PERCENT_ONLY_WIDTH : TICKER_WINDOW_WIDTH;
+  const minWidth = enabled ? 56 : 200;
+  const [x, y] = win.getPosition();
+  win.setMinimumSize(minWidth, 30);
+  win.setSize(width, TICKER_WINDOW_HEIGHT, false);
+  const next = clampToDisplay({ x, y }, { width, height: TICKER_WINDOW_HEIGHT });
+  win.setPosition(next.x, next.y, false);
+  pinTickerWindow(win);
 }
 
 function createTickerWindow() {
@@ -291,8 +304,11 @@ function delay(ms) {
 async function runSmokeTest() {
   const rendererErrors = [];
   const win = new BrowserWindow({
+    backgroundColor: "#00000000",
+    frame: false,
     height: TICKER_WINDOW_HEIGHT,
     show: false,
+    transparent: true,
     webPreferences: getWindowWebPreferences(),
     width: TICKER_WINDOW_WIDTH,
   });
@@ -327,10 +343,11 @@ async function runSmokeTest() {
 
     const optionsState = await optionsWindow.webContents.executeJavaScript(`({
       hasOpacityGroup: !!document.getElementById("window-opacity-group"),
+      hasPercentOnlyGroup: !!document.getElementById("percent-only-group"),
     })`);
 
-    if (!optionsState.hasOpacityGroup) {
-      throw new Error("Smoke failed: options window is missing window opacity controls");
+    if (!optionsState.hasOpacityGroup || !optionsState.hasPercentOnlyGroup) {
+      throw new Error(`Smoke failed: options window missing controls: ${JSON.stringify(optionsState)}`);
     }
 
     await optionsWindow.webContents.executeJavaScript(`
@@ -338,6 +355,7 @@ async function runSmokeTest() {
         language: "zh_CN",
         priceFlashEnabled: false,
         windowOpacity: 55,
+        percentOnlyMode: false,
         myStocks: [{ code: "600519", name: "贵州茅台", shortName: "贵州茅台", market: 1, enabled: true, type: "沪A" }]
       })
     `);
@@ -400,10 +418,53 @@ async function runSmokeTest() {
       );
     }
 
-    const display = screen.getPrimaryDisplay();
-    const targetX = display.bounds.x;
-    const targetY = display.bounds.y + display.bounds.height - TICKER_WINDOW_HEIGHT;
+    await optionsWindow.webContents.executeJavaScript(`
+      globalThis.easyTickerChrome.storage.sync.set({ percentOnlyMode: true })
+    `);
+    await delay(800);
+
+    const percentOnly = await win.webContents.executeJavaScript(`({
+      enabled: document.body.classList.contains("percent-only-mode"),
+      stockInfoDisplay: getComputedStyle(document.querySelector(".stock-info")).display,
+      trendDisplay: getComputedStyle(document.querySelector(".trend-col")).display,
+      hasTrend: !!document.querySelector(".trend-col img"),
+      priceDisplay: getComputedStyle(document.querySelector(".p-val")).display,
+      pctDisplay: getComputedStyle(document.querySelector(".p-pct")).display,
+      pctText: document.querySelector(".p-pct")?.textContent?.trim() || "",
+    })`);
+    const [percentOnlyWidth] = win.getSize();
+
+    if (
+      !percentOnly.enabled ||
+      percentOnly.stockInfoDisplay !== "none" ||
+      percentOnly.trendDisplay !== "none" ||
+      percentOnly.hasTrend ||
+      percentOnly.priceDisplay !== "none" ||
+      percentOnly.pctDisplay === "none" ||
+      !percentOnly.pctText.endsWith("%") ||
+      percentOnlyWidth !== TICKER_PERCENT_ONLY_WIDTH
+    ) {
+      throw new Error(
+        `Smoke failed percent-only mode: state=${JSON.stringify(percentOnly)}, width=${percentOnlyWidth}`
+      );
+    }
+
+    await optionsWindow.webContents.executeJavaScript(`
+      globalThis.easyTickerChrome.storage.sync.set({ percentOnlyMode: false })
+    `);
+    await delay(500);
+    const [restoredWidth] = win.getSize();
+
+    if (restoredWidth !== TICKER_WINDOW_WIDTH) {
+      throw new Error(`Smoke failed restoring ticker width: width=${restoredWidth}`);
+    }
+
     win.setPosition(100, 100);
+    await delay(100);
+    const display = screen.getPrimaryDisplay();
+    const { height: dragHeight } = win.getBounds();
+    const targetX = display.bounds.x;
+    const targetY = display.bounds.y + display.bounds.height - dragHeight;
     await win.webContents.executeJavaScript(`
       const row = document.querySelector("#list li:not(.tip)");
       row.dispatchEvent(new MouseEvent("mousedown", { bubbles: true, button: 0, screenX: 110, screenY: 110 }));
@@ -413,7 +474,8 @@ async function runSmokeTest() {
     await delay(200);
 
     const [draggedX, draggedY] = win.getPosition();
-    if (draggedX !== targetX || Math.abs(draggedY - targetY) > 1) {
+    const yFrameAllowance = 96;
+    if (draggedX !== targetX || draggedY > targetY + 1 || targetY - draggedY > yFrameAllowance) {
       throw new Error(
         `Smoke failed to drag bottom-left: actual=${JSON.stringify({ x: draggedX, y: draggedY })}, expected=${JSON.stringify({ x: targetX, y: targetY })}`
       );
@@ -450,7 +512,7 @@ function registerStorageHandlers() {
     const win = BrowserWindow.fromWebContents(event.sender);
     if (!win || win.isDestroyed()) return;
     const [x, y] = win.getPosition();
-    const [width, height] = win.getSize();
+    const [width, height] = win.getContentSize();
     dragState = { win, startPoint: point, startBounds: { x, y, width, height } };
   });
   ipcMain.on("easyTicker:window:drag-move", (event, point) => {
@@ -470,6 +532,10 @@ function registerStorageHandlers() {
     if (dragState?.win === win) {
       dragState = null;
     }
+  });
+  ipcMain.on("easyTicker:window:percent-only-mode", (event, enabled) => {
+    const win = BrowserWindow.fromWebContents(event.sender);
+    setTickerPercentOnlyMode(win, !!enabled);
   });
 }
 

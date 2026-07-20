@@ -62,6 +62,9 @@
    "cfgMarketGroup": {
       "message": "Market Groups:"
    },
+   "cfgPercentOnly": {
+      "message": "Percent Only:"
+   },
    "cfgPriceFlash": {
       "message": "Price Flash:"
    },
