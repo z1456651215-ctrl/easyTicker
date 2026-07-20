@@ -1,0 +1,44 @@
+electron/preload.cjs
+  s_2aa7292b485a4a::t_ce846e28cfe36c 92-94
+_locales/en/messages.json
+  s_2aa7292b485a4a::t_e19f2a2104ba95 65-67
+popup.html
+  s_2aa7292b485a4a::t_f46e9906f9ec4a 1
+_locales/zh_CN/messages.json
+  s_2aa7292b485a4a::t_02822e4592d939 65-67
+electron/main.cjs
+  s_2aa7292b485a4a::t_428891a72a3402 515
+  s_2aa7292b485a4a::t_894a6292282cd8 462-463
+  s_2aa7292b485a4a::t_91fe99eb8ac818 307-308,311
+  s_2aa7292b485a4a::t_28649779d7771d 477-478
+  s_2aa7292b485a4a::t_d5fd200c34a71f 23,131-142,535-538
+  s_2aa7292b485a4a::t_86fa6ad99c3a7f 465
+  s_2aa7292b485a4a::t_9ad9d4b9cd0365 467
+  s_2aa7292b485a4a::t_1b2062f21b88e9 346,349-350,358,418-448,451-460
+  s_2aa7292b485a4a::t_b10536681b7f7c 461
+options.html
+  s_2aa7292b485a4a::t_3f192a9525efa4 1
+popup.js
+  s_2aa7292b485a4a::t_f46e9906f9ec4a 1
+options.js
+  s_2aa7292b485a4a::t_fc83ce31087303 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "4176835ad7e8e5fab463313a8a5b5b7e51ba69fa",
+  "prompts": {},
+  "logical_commit_id": "4176835ad7e8e5fab463313a8a5b5b7e51ba69fa",
+  "sessions": {
+    "s_2aa7292b485a4a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f69ad-2913-7f91-9aaf-733e78271b2c",
+        "model": "gpt-5.5"
+      },
+      "human_author": "zhanghui.james <zhanghui.james@bigo.sg>",
+      "total_additions": 87,
+      "total_deletions": 12
+    }
+  }
+}
